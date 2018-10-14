@@ -1,7 +1,6 @@
 import React from "react";
 import Login from "./Login/Login";
 import Info from "./Info/Info";
-import NotMatch from "./NotMatch/NotMatch";
 
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
@@ -11,13 +10,8 @@ import { authUserAction } from "../store/actions/auth-user-action";
 import { AuthEnum } from "../store/reducers/AuthEnum";
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     const { isLogin } = this.props;
-    const { user } = this.props;
     return (
       <React.Fragment>
         <Switch>
@@ -39,7 +33,7 @@ class App extends React.Component {
               )}
             />
           )}
-          {/* <Redirect from="/*" to="/Login" /> */}
+          <Redirect from="/*" to="/Info" />
         </Switch>
       </React.Fragment>
     );

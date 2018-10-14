@@ -14,7 +14,6 @@ export const authReducer = (state = initialState, action) => {
       };
     }
     case "AUTH-USER": {
-      // debugger;
       return {
         ...state,
         user: action.payload

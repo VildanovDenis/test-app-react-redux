@@ -3,9 +3,6 @@ import "./style.css";
 
 class Info extends React.Component {
   render() {
-    console.log(this.props);
-    console.log(this.state);
-    // debugger;
     const { user } = this.props;
     return (
       <div className="user-info">
