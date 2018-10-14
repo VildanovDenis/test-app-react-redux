@@ -73,9 +73,9 @@ class Login extends React.Component {
             </label>
           </div>
           <div className="login-form__login">
-            <Link to="/Info" className="" onClick={this.handleSubmit}>
+            <button className="" onClick={this.handleSubmit}>
               Войти
-            </Link>
+            </button>
           </div>
         </form>
         {this.props.isLogin === AuthEnum.CANT_LOGIN ? (

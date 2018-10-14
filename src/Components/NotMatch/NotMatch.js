@@ -1,9 +1,9 @@
 import React from "react";
 
-class NotMatch extends React.Component {
+class AlternativeInfo extends React.Component {
   render() {
-    return <div>????</div>;
+    return <div>Войдите, чтобы продолжить</div>;
   }
 }
 
-export default NotMatch;
+export default AlternativeInfo;

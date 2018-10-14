@@ -14,27 +14,35 @@ class App extends React.Component {
     const { isLogin } = this.props;
     return (
       <React.Fragment>
-        <Switch>
-          {isLogin === AuthEnum.LOGIN ? (
-            <Route
-              path="/Info"
-              render={props => <Info {...props} user={this.props.userInfo} />}
-            />
-          ) : (
-            <Route
-              path="/"
-              render={props => (
-                <Login
-                  {...props}
-                  onLogin={this.props.auth}
-                  isLogin={this.props.isLogin}
-                  user={this.props.user}
-                />
-              )}
+        {/* <Switch> */}
+        {isLogin === AuthEnum.LOGIN ? (
+          <Redirect from="/*" to="/Info" />
+        ) : (
+          <Route
+            exact
+            path="/"
+            render={props => (
+              <Login
+                {...props}
+                onLogin={this.props.auth}
+                isLogin={this.props.isLogin}
+                user={this.props.user}
+              />
+            )}
+          />
+        )}
+        <Route
+          path="/Info"
+          render={props => (
+            <Info
+              {...props}
+              user={this.props.userInfo}
+              isLogin={this.props.isLogin}
             />
           )}
-          <Redirect from="/*" to="/Info" />
-        </Switch>
+        />
+        {/*  */}
+        {/* </Switch> */}
       </React.Fragment>
     );
   }
