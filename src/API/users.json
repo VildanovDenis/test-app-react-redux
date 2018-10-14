@@ -1,0 +1,32 @@
+{
+  "users": [
+    {
+      "login": "DenisVildanov",
+      "password": "Qwerty",
+      "name": "Денис",
+      "surname": "Вильданов",
+      "birthday": "11.04.1994"
+    },
+    {
+      "login": "Login",
+      "password": "Password",
+      "name": "Логин",
+      "surname": "Парольевич",
+      "birthday": "11.04.1994"
+    },
+    {
+      "login": "Admin",
+      "password": "ImAdmin",
+      "name": "Админ",
+      "surname": "Админович",
+      "birthday": "11.04.1994"
+    },
+    {
+      "login": "1",
+      "password": "1",
+      "name": "Первая",
+      "surname": "Цифра",
+      "birthday": "11.11.1111"
+    }
+  ]
+}
