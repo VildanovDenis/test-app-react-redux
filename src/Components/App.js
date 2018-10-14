@@ -39,6 +39,7 @@ class App extends React.Component {
               )}
             />
           )}
+          {/* <Redirect from="/*" to="/Login" /> */}
         </Switch>
       </React.Fragment>
     );
