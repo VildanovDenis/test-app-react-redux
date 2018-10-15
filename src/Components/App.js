@@ -9,6 +9,8 @@ import { authAction } from "../store/actions/auth-action";
 import { authUserAction } from "../store/actions/auth-user-action";
 import { AuthEnum } from "../store/reducers/AuthEnum";
 
+// Не забывать чистить localStorage!!!
+
 class App extends React.Component {
   render() {
     const { isLogin } = this.props;
