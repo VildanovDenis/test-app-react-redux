@@ -11,7 +11,7 @@ class Info extends React.Component {
 
   onLogoutButtonClick() {
     console.log();
-    this.props.onLogout(AuthEnum.NOT_LOGIN);
+    this.props.onLogout();
   }
 
   render() {
