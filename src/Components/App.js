@@ -7,6 +7,7 @@ import { bindActionCreators } from "redux";
 import { Route, Switch, Redirect } from "react-router-dom";
 import { authAction } from "../store/actions/auth-action";
 import { authUserAction } from "../store/actions/auth-user-action";
+import { logoutAction } from "../store/actions/logout-action";
 import { AuthEnum } from "../store/reducers/AuthEnum";
 
 // Не забывать чистить localStorage!!!
@@ -40,6 +41,7 @@ class App extends React.Component {
               {...props}
               user={this.props.userInfo}
               isLogin={this.props.isLogin}
+              onLogout={this.props.logout}
             />
           )}
         />
@@ -61,7 +63,8 @@ const mapDispatchToProps = dispatch =>
   bindActionCreators(
     {
       auth: authAction,
-      user: authUserAction
+      user: authUserAction,
+      logout: logoutAction
     },
     dispatch
   );
