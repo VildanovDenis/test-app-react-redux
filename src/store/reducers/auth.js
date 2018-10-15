@@ -20,9 +20,11 @@ export const authReducer = (state = initialState, action) => {
       };
     }
     case "LOGOUT": {
+      // const { isAuth } = action.payload;
       return {
-        state,
-        isAuth: action.payload
+        ...state,
+        isAuth: action.payload,
+        user: {}
       };
     }
     default: {
